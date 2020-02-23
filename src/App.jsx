@@ -79,14 +79,14 @@ class App extends Component {
         <h2>{this.state.title}</h2>
         <form ref="myForm" className="myForm">
           <input type="text" ref="fname" placeholder="your first name" className="formField" />
-          <input type="text" ref="lname" placeholder="your last number" className="formField"/>
+          <input type="text" ref="lname" placeholder="your last name" className="formField"/>
           <input type="text" ref="email" placeholder="your email" className="formField" />
           <button onClick={(e)=>this.fSubmit(e)} className="myButton">Submit</button>
         </form>
         <pre>
           {datas.map((data, i) =>
             <li key={i} className="myList">
-              {i+1}.{data.fname},{data.lname},{data.email}
+              {i+1}.{data.fname},{data.lname},{data.email}    //Read
               <button onClick={()=>this.fRemove(i)} className="myListButton">Remove</button>
               <button onClick={()=>this.fEdit(i)} className="myListButton">Edit</button>
             </li>
